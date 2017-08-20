@@ -11,4 +11,5 @@ class ConfigurationSerializer(serializers.ModelSerializer):
         Metaclass definition
         """
         model = Configuration
-        fields = ('key', 'value', 'created', 'updated')
+        fields = ('key', 'value', 'type', 'user', 'created', 'updated')
+        read_only_fields = ('type', 'user')

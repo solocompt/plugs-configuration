@@ -6,6 +6,6 @@ class ConfigurationAdmin(admin.ModelAdmin):
     """
     Configuration Model Admin
     """
-    list_display = ('key', 'value')
+    list_display = ('key', 'value', 'type', 'user')
 
 admin.site.register(Configuration, ConfigurationAdmin)

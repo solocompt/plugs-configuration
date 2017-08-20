@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-07 18:27+0000\n"
+"POT-Creation-Date: 2017-08-20 20:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: plugs_configuration/models.py:19
-msgid "configuration"
-msgstr ""
+#: plugs_configuration/models.py:16
+msgid "INTERNAL"
+msgstr "INTERNA"
 
-#: plugs_configuration/models.py:20
+#: plugs_configuration/models.py:17
+msgid "EXTERNAL"
+msgstr "EXTERNA"
+
+#: plugs_configuration/models.py:18
+msgid "USER"
+msgstr "UTILIZADOR"
+
+#: plugs_configuration/models.py:32
+msgid "configuration"
+msgstr "configuração"
+
+#: plugs_configuration/models.py:33
 msgid "configurations"
-msgstr ""
+msgstr "configurações"
