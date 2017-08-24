@@ -56,7 +56,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        "plugs_core>=0.1.6"
+        "plugs_core>=0.1.7"
     ],
     license="MIT",
     zip_safe=False,
