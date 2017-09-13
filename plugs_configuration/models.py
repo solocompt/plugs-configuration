@@ -43,5 +43,6 @@ class Configuration(mixins.Timestampable, models.Model):
         Providing verbose names is recommended if
         we want to use i18n in admin site
         """
+        ordering = ('pk', )
         verbose_name = _('configuration')
         verbose_name_plural = _('configurations')
