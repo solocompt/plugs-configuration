@@ -23,7 +23,7 @@ class ConfigurationViewSet(viewsets.ModelViewSet):
         serializer.save(user=self.request.user, type=Configuration.USER)
 
     def get_queryset(self):
-        if not self.request.user.is_authenticated():
+        if not self.request.user.is_authenticated:
             return self.queryset.exclude(type=Configuration.USER)
         else:
             return self.queryset.filter(Q(user=self.request.user) | Q(type=Configuration.EXTERNAL))
