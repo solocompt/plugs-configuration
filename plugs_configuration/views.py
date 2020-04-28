@@ -8,9 +8,6 @@ from plugs_configuration.models import Configuration
 from plugs_configuration import serializers
 
 class ConfigurationViewSet(viewsets.ModelViewSet):
-    """
-    Configuration Viewset
-    """
     queryset = Configuration.objects.exclude(type=Configuration.INTERNAL)
     serializer_class = serializers.ConfigurationSerializer
     permission_classes = [IsOwnerOrReadOnly]
@@ -23,7 +20,7 @@ class ConfigurationViewSet(viewsets.ModelViewSet):
         serializer.save(user=self.request.user, type=Configuration.USER)
 
     def get_queryset(self):
-        if not self.request.user.is_authenticated():
+        if not self.request.user.is_authenticated:
             return self.queryset.exclude(type=Configuration.USER)
         else:
             return self.queryset.filter(Q(user=self.request.user) | Q(type=Configuration.EXTERNAL))
